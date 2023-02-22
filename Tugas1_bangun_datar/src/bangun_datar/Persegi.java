@@ -7,29 +7,25 @@ package bangun_datar;
  * @author Jeremy
  *
  */
-public class Persegi {
+public class Persegi extends BangunDatar{
 	private int sisi;
-	private int luas_persegi;
-	private int keliling_persegi;
 	
-	public void setLuasPersegi(int sisi) throws Exception{
-		if (sisi >0) {
-			this.sisi = sisi;
-		}
-		else {
-			throw new Exception ("sisi Tidak Boleh Negatif");
-		}
-	this.luas_persegi = sisi * sisi;	
+	public Persegi() {
+		
 	}
-	public double getLuasPersegi() {
-		return luas_persegi;
+	public Persegi(int sisi) {
+		this.sisi = sisi;
 	}
-	
-	public void setKelilingPersegi(){
-		this.keliling_persegi = 4 * sisi;	
+	public String getLuas() {
+		this.luas = sisi * sisi;
+		String new_luas_persegi = Double.toString(luas);  
+		return ("Luas Persegi: "+new_luas_persegi);
 	}
-	public int getKelilingPersegi() {
-		return keliling_persegi;
+
+	public String getKeliling() {
+		this.keliling = 4 * sisi;
+		String new_keliling_persegi = Double.toString(keliling);
+		return ("Keliling Persegi: "+new_keliling_persegi);
 	}
 
 }

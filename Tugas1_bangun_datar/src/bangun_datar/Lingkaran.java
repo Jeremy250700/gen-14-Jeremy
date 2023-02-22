@@ -7,28 +7,24 @@ package bangun_datar;
  * @author Jeremy
  *
  */
-public class Lingkaran {
+public class Lingkaran extends BangunDatar{
 	private int jari_jari;
-	private double luas_lingkaran;
-	private double keliling_lingkaran;
-	
-	public void setLuasLingkaran(int jari_jari) throws Exception{
-		if (jari_jari >0) {
-			this.jari_jari = jari_jari;
-		}
-		else {
-			throw new Exception ("Jari Jari Tidak Boleh Negatif");
-		}
-	this.luas_lingkaran = 3.14 * jari_jari * jari_jari;	
+	public Lingkaran() {
+		
 	}
-	public double getLuasLingkaran() {
-		return luas_lingkaran;
+	public Lingkaran(int jari_jari) {
+		this.jari_jari = jari_jari;
 	}
 	
-	public void setKelilingLingkaran() throws Exception{
-		this.keliling_lingkaran = 3.14 * (jari_jari * 2);	
+	public String getLuas() {
+		this.luas = 3.14 * jari_jari * jari_jari;	
+		String new_luas_lingkaran = Double.toString(luas);
+		return ("Luas Lingkaran: "+new_luas_lingkaran);
 	}
-	public double getKelilingLingkaran() {
-		return keliling_lingkaran;
+	
+	public String getKeliling() {
+		this.keliling = 3.14 * (jari_jari * 2);
+		String new_keliling_lingkaran = Double.toString(keliling);
+		return ("Keliling Lingkaran: "+new_keliling_lingkaran);
 	}
 }

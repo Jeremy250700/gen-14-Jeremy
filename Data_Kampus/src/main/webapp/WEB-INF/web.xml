@@ -1,0 +1,56 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<servlet>
+		<servlet-name>AddDosenController</servlet-name>
+		<display-name>AddDosenController</display-name>
+		<description></description>
+		<servlet-class>com.prodemy.AddDosenController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ShowDosen</servlet-name>
+		<display-name>ShowDosen</display-name>
+		<description></description>
+		<servlet-class>com.prodemy.ShowDosen</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateDosen</servlet-name>
+		<display-name>UpdateDosen</display-name>
+		<description></description>
+		<servlet-class>com.prodemy.UpdateDosen</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateDataDosenController</servlet-name>
+		<display-name>UpdateDataDosenController</display-name>
+		<description></description>
+		<servlet-class>com.prodemy.UpdateDataDosenController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteDataDosenController</servlet-name>
+		<display-name>DeleteDataDosenController</display-name>
+		<description></description>
+		<servlet-class>com.prodemy.DeleteDataDosenController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddDosenController</servlet-name>
+		<url-pattern>/addDosen</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShowDosen</servlet-name>
+		<url-pattern>/showDataDosen</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateDosen</servlet-name>
+		<url-pattern>/updateDataDosen</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateDataDosenController</servlet-name>
+		<url-pattern>/updateDataDosenController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteDataDosenController</servlet-name>
+		<url-pattern>/deleteDataDosen</url-pattern>
+	</servlet-mapping>
+</web-app>

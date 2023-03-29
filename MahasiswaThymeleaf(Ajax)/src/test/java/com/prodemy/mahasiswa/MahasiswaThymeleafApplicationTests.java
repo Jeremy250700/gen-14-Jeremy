@@ -1,0 +1,13 @@
+package com.prodemy.mahasiswa;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class MahasiswaThymeleafApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Blank Page</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Font Awesome -->
+  <!-- Theme style -->
+  <link rel="stylesheet" th:href="@{/css/adminlte.min.css}">
+</head>
+<body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav th:replace="fragments/navbar"></nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside th:replace="fragments/sidebar"></aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Blank Page</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    <div class="card">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
+  	New Mahasiswa
+		</button>
+	</div>
+      <!-- Default box -->
+       <div class="card">
+              <div class="card-header">
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input id="dataSearch" type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+              <div>
+              
+              </div>
+              <h3 align="center"> List Mahasiswa</h3>
+                <table class="table table-hover text-nowrap" id="data">
+                </table>
+              </div>
+            </div>
+            <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer th:replace="fragments/footer"></footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Form New Mahasiswa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id='msg' align="center"></div>
+      <div class="modal-body">
+      				<div id="input-form" class="form-group">
+					<form id="quickForm">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">NIM</label>
+                    <input type="text" name="nim" class="form-control" id="nim" placeholder="NIM">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Nama</label>
+                    <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Umur</label>
+                    <input type="text" name="umur" class="form-control" id="umur" placeholder="Umur">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Email</label>
+                    <input type="text" name="email" class="form-control" id="email" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Kota</label>
+                    <input type="text" name="kota" class="form-control" id="kota" placeholder="Kota">
+                  </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeModal">Close</button>
+        			<button type="button" class="btn btn-primary" id="addNew">Save changes</button>
+                </div>
+              </form>
+              </div>
+<!-- 					<div id='msg'></div> -->
+<!-- 					<div id="input-form" class="form-group"> -->
+<!-- 					<h3>Add a New Mahasiswa</h3> -->
+<!-- 					<p> -->
+<!-- 					<label>NIM</label> -->
+<!-- 					<input type="text" id="nim" name="nim"> -->
+<!-- 					</p> -->
+					
+<!-- 					<p> -->
+<!-- 					<label>Nama</label> -->
+<!-- 					<input type="text" id="nama" name="nama"> -->
+<!-- 					</p> -->
+					
+<!-- 					<p> -->
+<!-- 					<label>Umur</label> -->
+<!-- 					<input type="text" id="umur" name="umur"> -->
+<!-- 					</p> -->
+<!-- 					<p> -->
+<!-- 					<label>Email</label> -->
+<!-- 					<input type="text" id="email" name="email"> -->
+<!-- 					</p> -->
+<!-- 					<p> -->
+<!-- 					<label>Kota</label> -->
+<!-- 					<input type="text" id="kota" name="kota"> -->
+<!-- 					</p>				 -->
+					
+        		
+      </div>
+<!--       <div class="modal-footer"> -->
+<!--         <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeModal">Close</button> -->
+<!--         <button type="button" class="btn btn-primary" id="addNew">Save changes</button> -->
+<!--       </div> -->
+    </div>
+  </div>
+</div>
+<!-- jQuery -->
+<script th:src="@{/plugins/jquery/jquery.min.js}"></script>
+<!-- Bootstrap 4 -->
+<script th:src="@{/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<!-- AdminLTE App -->
+<script th:src="@{/js/adminlte.min.js}"></script>
+<!-- AdminLTE for demo purposes -->
+ <script th:src="@{/js/script.js}" type="text/javascript"></script> 
+</body>
+</html>
